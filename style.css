@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+     background: url('./assets/3d-render-books-fly-fall-blue-background.jpg') no-repeat center center;
+  background-size: cover;
+
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+  font-family: sans-serif;
+}
+
+.container{
+    background-color: rgba(167, 192, 255, 0.615);
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    position:relative ;
+
+
+     background: rgba(255, 255, 255, 0.1); /* translucent */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(16px); /* 💧 Glass effect */
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.27); /* subtle border */
+  color: rgba(28, 66, 78, 0.99);
+
+}
+
+
+/* screen */
+.screen{
+    display: none;
+    padding: 2rem;
+    text-align: center;
+}
+
+.screen.active{
+    display: block;
+}
+
+/*start scrren*/
+#start-screen h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+#start-screen p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.quiz-header{
+    margin-bottom: 2rem;
+}
+
+#question-text{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.quiz-info{
+    
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: rgb(107, 107, 107);
+}
+
+.answers-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.answer-btn{
+
+     
+    background-color: rgba(98, 98, 98, 0.763);
+    border: 2px solid rgba(255, 255, 255, 0.571);
+    border-radius: 10px;
+    padding: 1rem;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.answer-btn:hover{
+    background-color: rgba(149, 209, 255, 0.433);
+    border-color: rgb(87, 179, 249);
+    color: rgb(64, 146, 208);
+}
+
+.answer-btn.correct{
+    background-color: rgba(81, 250, 78, 0.289);
+    border-color: rgb(0, 153, 10);
+    color: rgb(0, 153, 10);
+}
+
+.answer-btn.incorrect{
+    background-color: rgba(255, 59, 56, 0.287);
+    border-color: rgb(184, 0, 0);
+    color: rgb(184, 0, 0);
+}
+
+.progress-bar{
+    height: 10px;
+    background-color: rgba(208, 250, 255, 0.805);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.progress{
+    height: 100%;
+    background-color: rgba(37, 104, 206, 0.683);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+/* result screen */
+
+#result-screen{
+    /* color: rgb(233, 148, 67); */
+    margin-bottom: 30px;
+}
+
+.result-info{
+     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.454);
+    border-radius: 10px;
+    border: 1px solid rgba(216, 216, 216, 0.237);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.result-info p{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#result-message{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgba(134, 38, 38, 0.646);
+}
+
+button{
+    background-color: rgb(98, 76, 244);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover{
+    background-color:rgb(64, 61, 149);
+}
+
+
+/* responsive design */
+
+@media (max-width:500px){
+    /* when we hit 500px or below,impliment the style below */
+
+    .screen{
+        padding: 1rem;
+    }
+
+    #start-screen hi{
+        font-size: 2rem;
+    }
+
+
+}
